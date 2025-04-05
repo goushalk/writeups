@@ -1,0 +1,108 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .card {
+    background-color: inherit;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dark-theme .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+
+  .light-theme .card {
+    background-color: #f9f9f9;
+    color: #000000;
+  }
+
+  .theme-toggle {
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: inherit;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+
+  @font-face {
+    font-family: android;
+    src: url(/fonts/Android.ttf);
+}
+
+@font-face {
+    font-family: digital;
+    src: url(/fonts/digitative-1023.ttf);
+}
+
+@font-face {
+    font-family: syn;
+    src: url(/fonts/Syntachron-Bold.ttf);
+}
+
+@font-face {
+    font-family: bionical;
+    src: url(/fonts/BionicalDemo-8MJ5A.ttf);
+}
+
+@font-face {
+    font-family: lines;
+    src: url(/fonts/Exwayer-X3eqa.ttf);
+}
+
+@font-face {
+    font-family: glitch;
+    src: url(/fonts/GlitchGoblin-2O87v.ttf);
+}
+
+
+@font-face {
+    font-family: hindi;
+    src: url(/Writeups/fonts/SAMAN___.ttf);
+  }
+
+
+
+@media (max-width: 435px){
+    .fa-download{
+        font-size: 1em
+    }
+
+    #stegloop{
+        font-size: 1em;
+    }
+
+    strong{
+        font-size: 1em;
+    }
+
+    .text-lime{
+        font-size: 1.6em ;
+    }
+
+    .text-white{
+        font-size: 1.4em;
+    }
+}
