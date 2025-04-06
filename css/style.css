@@ -51,21 +51,22 @@ body {
 }
 
 .light-theme .navbar a.nav-link:hover {
-    color: #007bff; /* Highlight color on hover */
+    color: lime; /* Highlight color on hover */
 }
 
 /* Navbar styles for dark theme */
 .dark-theme .navbar {
     /* background-color: #343a40; Dark background */
-    color: #ffffff; /* Light text */
+    color: #ffffff; /* Light text */   
 }
+
 
 .dark-theme .navbar a.nav-link {
     color: #ffffff; /* Light text for links */
 }
 
 .dark-theme .navbar a.nav-link:hover {
-    color: #17a2b8; /* Highlight color on hover */
+    color: lime; /* Highlight color on hover */
 }
 
 @font-face {
