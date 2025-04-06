@@ -1,53 +1,74 @@
 body {
     transition: background-color 0.3s, color 0.3s;
-  }
+}
 
-  .dark-theme {
+.dark-theme {
     background-color: #121212;
     color: #ffffff;
-  }
+}
 
-  .light-theme {
+.light-theme {
     background-color: #ffffff;
     color: #000000;
-  }
+}
 
-  .card {
+.card {
     background-color: inherit;
     border: 1px solid #ccc;
     transition: background-color 0.3s, color 0.3s;
-  }
+}
 
-  .dark-theme .card {
+.dark-theme .card {
     background-color: #1e1e1e;
     color: #ffffff;
-  }
+}
 
-  .light-theme .card {
+.light-theme .card {
     background-color: #f9f9f9;
     color: #000000;
-  }
+}
 
-  .theme-toggle {
-    cursor: pointer;
+.theme-toggle {
+    cursor: grab;
     position: fixed;
     top: 10px;
     right: 10px;
     z-index: 1000;
-  }
+}
 
-  footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: inherit;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
+.theme-toggle:active {
+    cursor: grabbing;
+}
 
-  @font-face {
+/* Navbar styles for light theme */
+.light-theme .navbar {
+    /* background-color: #f8f9fa; Light background */
+    color: #000000; /* Dark text */
+}
+
+.light-theme .navbar a.nav-link {
+    color: #000000; /* Dark text for links */
+}
+
+.light-theme .navbar a.nav-link:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* Navbar styles for dark theme */
+.dark-theme .navbar {
+    /* background-color: #343a40; Dark background */
+    color: #ffffff; /* Light text */
+}
+
+.dark-theme .navbar a.nav-link {
+    color: #ffffff; /* Light text for links */
+}
+
+.dark-theme .navbar a.nav-link:hover {
+    color: #17a2b8; /* Highlight color on hover */
+}
+
+@font-face {
     font-family: android;
     src: url(/fonts/Android.ttf);
 }
@@ -77,32 +98,94 @@ body {
     src: url(/fonts/GlitchGoblin-2O87v.ttf);
 }
 
-
 @font-face {
     font-family: hindi;
     src: url(/Writeups/fonts/SAMAN___.ttf);
-  }
+}
 
-
-
-@media (max-width: 435px){
-    .fa-download{
-        font-size: 1em
-    }
-
-    #stegloop{
+@media (max-width: 435px) {
+    .fa-download {
         font-size: 1em;
     }
 
-    strong{
+    #stegloop {
         font-size: 1em;
     }
 
-    .text-lime{
-        font-size: 1.6em ;
+    strong {
+        font-size: 1em;
     }
 
-    .text-white{
+    .text-lime {
+        font-size: 1.6em;
+    }
+
+    .text-white {
         font-size: 1.4em;
     }
+}
+
+/* Ensure images and sections scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p {
+    word-wrap: break-word;
+}
+
+/* Adjust padding and margins for smaller screens */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Blur effect for the card */
+.blur-card {
+  position: relative;
+  filter: blur(4px); /* Apply blur effect */
+  pointer-events: none; /* Disable interactions */
+  overflow: hidden; /* Ensure the overlay stays within the card */
+}
+
+/* Overlay for "Coming Soon" text */
+.blur-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: rgb(10, 10, 10);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  pointer-events: none; /* Disable interactions */
+  filter: none; /* Ensure the text is not blurred */
+  z-index: 1; /* Place the overlay above the blurred card */
 }
